@@ -1605,7 +1605,7 @@ body {
 
   .couple-card {
     flex: 0 1 180px;
-    min-height: 400px;
+    min-height: 350px;
     padding: 22px 18px;
   }
 
