@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emerald & Gold · Wedding Invitation</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Lato:wght@300;400;700&display=swap"
+        rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ===== BACKGROUND ===== -->
+    <div class="bg-gradient"></div>
+    <div class="bg-glow"></div>
+
+    <!-- ===== WEDDING CARD ===== -->
+    <div class="wedding-card" id="weddingCard">
+
+        <!-- ===== ENVELOPE LANDING ===== -->
+        <div class="envelope-layer" id="envelopeLayer">
+            <div class="envelope-floral-left">✿<br>✦<br>✿<br>✦<br>✿</div>
+            <div class="envelope-floral-right">✿<br>✦<br>✿<br>✦<br>✿</div>
+            <div class="envelope-border-pattern"></div>
+            <div class="envelope-icon-top"><i class="fas fa-envelope-open-text"></i></div>
+            <div class="envelope-text">You're Invited</div>
+            <div class="envelope-divider"></div>
+            <div class="envelope-sub">Sharmaine &amp; Mark John · 12.18.2026</div>
+            <div class="envelope-seal" id="sealBtn" title="Click the seal to open">
+                <i class="fas fa-crown"></i>
+            </div>
+        </div>
+
+        <!-- ===== INVITATION CONTENT ===== -->
+        <div class="invitation-content" id="invitationContent">
+            <div class="invitation-inner">
+
+                <!-- ===== MUSIC PLAYER ===== -->
+                <div class="music-player-wrapper">
+                    <div class="music-player-circle" id="musicPlayer">
+                        <i class="fas fa-music disc-icon" id="discIcon"></i>
+                        <div class="play-pause-icon" id="playPauseBtn">
+                            <i class="fas fa-play" id="playIcon"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="music-label">♫ Instrumental</div>
+
+                <!-- HEADER -->
+                <div class="invitation-header" id="invitationHeader">
+                    <div class="ornament">✦ ✦ ✦</div>
+                    <h1>Sharmaine <span>&amp;</span> Mark John</h1>
+                    <div class="divider-line"></div>
+                    <p class="subtitle">are getting married</p>
+                    <div class="date-big">
+                        <i class="fas fa-calendar-alt"></i>
+                        18 December 2026
+                        <i class="fas fa-chevron-right chevron-icon"></i>
+                        <i class="fas fa-map-pin"></i>
+                    </div>
+                    <div class="venue-links" id="venueLinks">
+                        <a href="https://maps.app.goo.gl/kvM3ZDmSAn9mgTX68" target="_blank" class="venue-link">
+                            <i class="fas fa-location-dot"></i>
+                            Venue - San Antonio - Arzadon San Manuel, Pangasinan
+                            <i class="fas fa-external-link-alt external-icon"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- COUPLE CARDS -->
+                <div class="couple-grid" id="coupleGrid">
+                    <div class="couple-card" id="ellaCard">
+                        <div class="avatar"><i class="fas fa-user"></i></div>
+                        <h3>Sharmaine</h3>
+                        <div class="role">Bride</div>
+                        <p class="desc">"A lifetime of love begins with 'I DO'."</p>
+                        <div class="photo-overlay">
+                            <img src="img/maine.jpg" alt="Sharmaine">
+                            <span class="photo-label">💚 Sharmaine 💚</span>
+                        </div>
+                    </div>
+                    <div class="heart-icon" id="heartTrigger"><i class="fas fa-heart"></i></div>
+                    <div class="couple-card" id="jamesCard">
+                        <div class="avatar"><i class="fas fa-user"></i></div>
+                        <h3>Mark John</h3>
+                        <div class="role">Groom</div>
+                        <p class="desc">"Our forever begins with God."</p>
+                        <div class="photo-overlay">
+                            <img src="img/mj.jpg" alt="Mark John">
+                            <span class="photo-label">💛 Mark John 💛</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ===== COUNTDOWN ===== -->
+                <div class="countdown-section" id="countdownSection">
+                    <h3><i class="fas fa-hourglass-half countdown-icon"></i> Counting Down</h3>
+                    <div class="countdown-wrap" id="countdownWrap">
+                        <div class="countdown-item">
+                            <div class="number" id="days">00</div>
+                            <div class="label">Days</div>
+                        </div>
+                        <div class="countdown-item">
+                            <div class="number" id="hours">00</div>
+                            <div class="label">Hours</div>
+                        </div>
+                        <div class="countdown-item">
+                            <div class="number" id="minutes">00</div>
+                            <div class="label">Minutes</div>
+                        </div>
+                        <div class="countdown-item">
+                            <div class="number" id="seconds">00</div>
+                            <div class="label">Seconds</div>
+                        </div>
+                    </div>
+
+                    <div class="countdown-finished" id="countdownFinished">
+                        <div class="couple-photo-container">
+                            <img src="img/youandme2.jpeg" alt="Sharmaine & Mark John">
+                            <span class="photo-badge">💚 Together Forever 💛</span>
+                        </div>
+                        <h3>💚 The Wedding Day is Here! 💛</h3>
+                        <p>Sharmaine &amp; Mark John are now married!</p>
+                        <div class="celebration-text">🎉 💚 💛 🎉</div>
+                        <p class="finish-quote">"And they lived happily ever after..."</p>
+                    </div>
+                </div>
+
+                <!-- ===== VIDEO TRAILER ===== -->
+                <div class="video-trailer-section" id="videoSection">
+                    <h3><i class="fas fa-play-circle video-icon"></i> Wedding Trailer</h3>
+                    <div class="video-container" id="videoContainer">
+                        <video id="weddingVideo" playsinline preload="metadata">
+                            <source src="vid/you&me.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <button class="volume-btn" id="volumeBtn" title="Toggle Sound">
+                            <i class="fas fa-volume-up" id="volumeIcon"></i>
+                        </button>
+                        <div class="play-btn-overlay" id="videoPlayBtn">
+                            <i class="fas fa-play-circle"></i>
+                        </div>
+                        <div class="video-label">❤️ Our Love Story ❤️</div>
+                        <div class="video-controls" id="videoControls">
+                            <button id="playPauseVideoBtn" title="Play/Pause">
+                                <i class="fas fa-play" id="videoPlayIcon"></i>
+                            </button>
+                            <div class="progress-bar" id="progressBar">
+                                <div class="progress-fill" id="progressFill"></div>
+                            </div>
+                            <span class="time-display" id="timeDisplay">0:00 / 0:00</span>
+                            <button id="fullscreenBtn" class="fullscreen-btn" title="Fullscreen">
+                                <i class="fas fa-expand" id="fullscreenIcon"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PROGRAM -->
+                <div class="program-section" id="programSection">
+                    <h3><i class="fas fa-calendar-check program-icon"></i> Wedding Program</h3>
+                    <div class="program-item">
+                        <span class="time">3:30 PM</span>
+                        <span class="event"><i class="fas fa-people-arrows"></i> Guests arrive · welcome drinks</span>
+                    </div>
+                    <div class="program-item">
+                        <span class="time">4:00 PM</span>
+                        <span class="event"><i class="fas fa-ring"></i> Ceremony begins</span>
+                    </div>
+                    <div class="program-item">
+                        <span class="time">5:00 PM</span>
+                        <span class="event"><i class="fas fa-handshake"></i> Cocktail hour &amp; photos</span>
+                    </div>
+                    <div class="program-item">
+                        <span class="time">6:30 PM</span>
+                        <span class="event"><i class="fas fa-utensils"></i> Reception dinner</span>
+                    </div>
+                    <div class="program-item">
+                        <span class="time">8:00 PM</span>
+                        <span class="event"><i class="fas fa-cake"></i> Cake cutting &amp; toasts</span>
+                    </div>
+                    <div class="program-item">
+                        <span class="time">9:00 PM</span>
+                        <span class="event"><i class="fas fa-music"></i> Dance floor opens · Party!</span>
+                    </div>
+                </div>
+
+                <!-- WEDDING PARTY -->
+                <div class="party-section" id="partySection">
+                    <div class="party-title">
+                        <h3><i class="fas fa-users party-icon"></i> Wedding Party</h3>
+                    </div>
+                    <div class="party-sub"><i class="fas fa-handshake"></i> Sponsors (40)</div>
+                    <div class="party-grid" id="sponsorsGrid"></div>
+                    <div class="party-sub"><i class="fas fa-user-tie"></i> Groomsmen (10)</div>
+                    <div class="party-grid" id="groomsmenGrid"></div>
+                    <div class="party-sub"><i class="fas fa-user-friends"></i> Bridesmaids (10)</div>
+                    <div class="party-grid" id="bridesmaidsGrid"></div>
+                    <div class="party-sub"><i class="fas fa-star"></i> Special Roles</div>
+                    <div class="party-grid" id="specialRolesGrid"></div>
+                </div>
+
+                <!-- RSVP & CLOSE -->
+                <div class="rsvp-section" id="rsvpSection">
+                    <a href="https://m.me/janjan.delbarrio.official" target="_blank" class="btn-gold" id="rsvpBtn">
+                        <i class="fab fa-facebook-messenger"></i> RSVP now
+                    </a>
+                    <div>
+                        <button class="close-seal-btn" id="closeSealBtn">
+                            <i class="fas fa-envelope"></i> Seal again
+                        </button>
+                    </div>
+                    <div class="music-note">
+                        <i class="fas fa-music"></i> ♪ Instrumental Wedding Entrance ♪
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== AUDIO ===== -->
+    <audio id="bgAudio" preload="auto" loop>
+        <source src="music/wedding-audio.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- ===== CONFETTI ===== -->
+    <div class="confetti-container" id="confettiContainer"></div>
+
+    <!-- Custom JavaScript -->
+    <script src="script.js"></script>
+</body>
+
+</html>
