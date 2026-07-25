@@ -579,19 +579,22 @@ body {
   background: rgba(247, 242, 233, 0.95);
   border: 2px solid #c9a84c;
   overflow: hidden;
-  padding: 12px;
+  padding: 0;
 }
 
 .couple-card .photo-overlay img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 18px;
+  object-position: center;
+  display: block;
 }
 
 .couple-card .photo-overlay .photo-label {
   position: absolute;
   bottom: 12px;
+  left: 50%;
+  transform: translateX(-50%);
   background: rgba(30, 74, 59, 0.85);
   color: #f7eacb;
   padding: 5px 20px;
@@ -601,6 +604,8 @@ body {
   letter-spacing: 2px;
   font-family: 'Playfair Display', serif;
   border: 1px solid #c9a84c;
+  white-space: nowrap;
+  z-index: 2;
 }
 
 .couple-card:hover .photo-overlay {
