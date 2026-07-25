@@ -800,7 +800,7 @@ body {
     flex: 0 1 auto;
     width: 100%;
     max-width: 280px;
-    min-height: 190px;
+    min-height: 400px;
     padding: 22px 18px;
   }
 
@@ -1755,7 +1755,7 @@ body {
 
   .couple-card {
     flex: 0 1 150px;
-    min-height: 160px;
+    min-height: 400px;
     padding: 16px 12px;
   }
 
