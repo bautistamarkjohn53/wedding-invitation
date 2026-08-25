@@ -1,47 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.5, user-scalable=yes">
-  <title>Emerald &amp; Gold · Wedding Invitation</title>
-  <!-- Font Awesome -->
+  <title>Emerald & Gold · Wedding Invitation</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
-  <!-- Custom CSS -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Lato:wght@300;400;700&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="invitation/style.css">
 </head>
+
 <body>
 
-  <!-- ===== BACKGROUND ===== -->
   <div class="bg-gradient"></div>
   <div class="bg-glow"></div>
 
-  <!-- ===== WEDDING CARD ===== -->
-  <div class="wedding-card" id="weddingCard">
-
-    <!-- ===== ENVELOPE LANDING ===== -->
-    <div class="envelope-layer" id="envelopeLayer">
-      <div class="envelope-floral-left">✿<br>✦<br>✿<br>✦<br>✿</div>
-      <div class="envelope-floral-right">✿<br>✦<br>✿<br>✦<br>✿</div>
-      <div class="envelope-border-pattern"></div>
-      <div class="envelope-icon-top"><i class="fas fa-envelope-open-text"></i></div>
-      <div class="envelope-text">You're Invited</div>
-      <div class="envelope-divider"></div>
-      <div class="envelope-sub">Mark John &amp; Sharmaine · 12.18.2026</div>
-      <div class="envelope-seal" id="sealBtn" title="Click the seal to open">
-        <i class="fas fa-crown"></i>
+  <div class="book-container" id="weddingCard">
+    <!-- COVER -->
+    <div class="cover-page" id="envelopeLayer">
+      <div class="cover-content">
+        <div class="ring-icon"></div>
+        <p class="cover-save">Save the Date</p>
+        <div class="cover-date">
+          <span class="cover-day">18</span>
+          <div class="cover-month-year">
+            <span class="cover-month">DECEMBER</span>
+            <span class="cover-year">2026</span>
+          </div>
+        </div>
+        <div class="cover-time"><i class="fas fa-clock"></i> 08:00 AM</div>
+        <div class="cover-seal" id="sealBtn">
+          <i class="fas fa-crown"></i>
+          <span>OPEN</span>
+        </div>
       </div>
     </div>
 
-    <!-- ===== INVITATION CONTENT ===== -->
-    <div class="invitation-content" id="invitationContent">
-      <div class="invitation-inner">
+    <!-- INVITATION CONTENT -->
+    <div class="invitation-page" id="invitationContent">
+      <div class="page-content">
 
-        <!-- ===== MUSIC PLAYER ===== -->
-        <div class="music-player-wrapper">
+        <!-- MUSIC PLAYER -->
+        <div class="music-player-wrapper" id="musicPlayerWrapper">
           <div class="music-player-circle" id="musicPlayer">
             <i class="fas fa-music disc-icon" id="discIcon"></i>
             <div class="play-pause-icon" id="playPauseBtn">
@@ -49,55 +53,59 @@
             </div>
           </div>
         </div>
-        <div class="music-label">♫ Instrumental</div>
+        <div class="music-label" id="musicLabel">♫ Instrumental</div>
 
-        <!-- HEADER -->
-        <div class="invitation-header" id="invitationHeader">
-          <div class="ornament">✦ ✦ ✦</div>
-          <h1>Mark John <div>&amp;</div> Sharmaine</h1>
-          <div class="divider-line"></div>
-          <p class="subtitle">are getting married</p>
-          <div class="date-big">
-            <i class="fas fa-calendar-alt"></i>
-            18 December 2026
-            <i class="fas fa-chevron-right chevron-icon"></i>
-            <i class="fas fa-map-pin"></i>
+        <!-- COUPLE -->
+        <div class="couple-page" id="couplePage">
+          <p class="grace-text">BY THE GRACE OF GOD</p>
+          <p class="blessing-text">
+            WITH GRATEFUL HEARTS AND GOD'S ABUNDANT BLESSINGS,
+            <br>
+            TOGETHER WITH OUR FAMILIES, WE,
+          </p>
+          <div class="couple-names">
+            <h2>Mark John</h2>
+            <span class="and-symbol">&amp;</span>
+            <h2>Sharmaine</h2>
           </div>
-          <div class="venue-links" id="venueLinks">
-            <a href="https://maps.app.goo.gl/kvM3ZDmSAn9mgTX68" target="_blank" class="venue-link">
-              <i class="fas fa-location-dot"></i>
-              Venue - San Antonio - Arzadon San Manuel, Pangasinan
-              <i class="fas fa-external-link-alt external-icon"></i>
-            </a>
+          <p class="invite-text">JOYFULLY INVITE YOU TO WITNESS AND CELEBRATE
+            <br>
+            THE BEGINNING OF OUR NEW LIFE AS HUSBAND AND WIFE.
+          </p>
+
+          <!-- ===== COUPLE CARDS ===== -->
+          <div class="couple-grid" id="coupleGrid">
+            <div class="couple-card" id="jamesCard">
+              <div class="avatar"><i class="fas fa-user"></i></div>
+              <div class="role">Groom</div>
+              <p class="desc">"Our forever begins with God."</p>
+              <div class="photo-overlay">
+                <img src="invitation/img/mj.jpg" target="_blank" alt="Mark John">
+                <span class="photo-label">💛 Mark John 💛</span>
+              </div>
+            </div>
+            <div class="heart-icon" id="heartTrigger"><i class="fas fa-heart"></i></div>
+            <div class="couple-card" id="ellaCard">
+              <div class="avatar"><i class="fas fa-user"></i></div>
+              <div class="role">Bride</div>
+              <p class="desc">"A lifetime of love begins with 'I DO'."</p>
+              <div class="photo-overlay">
+                <img src="invitation/img/maine.jpg" alt="Sharmaine">
+                <span class="photo-label">💚 Sharmaine 💚</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="wedding-date-detail">
+            <div class="date-detail-item">
+              <a href="https://maps.app.goo.gl/kvM3ZDmSAn9mgTX68" target="_blank">
+                <i class="fas fa-map-pin"></i> San Antonio - Arzadon, San Manuel, Pangasinan
+              </a>
+            </div>
           </div>
         </div>
 
-        <!-- COUPLE CARDS -->
-        <div class="couple-grid" id="coupleGrid">
-          <div class="couple-card" id="ellaCard">
-            <div class="avatar"><i class="fas fa-user"></i></div>
-            <h3>Sharmaine</h3>
-            <div class="role">Bride</div>
-            <p class="desc">"A lifetime of love begins with 'I DO'."</p>
-            <div class="photo-overlay">
-              <img src="invitation/img/maine.jpg" alt="Sharmaine">
-              <span class="photo-label">💚 Sharmaine 💚</span>
-            </div>
-          </div>
-          <div class="heart-icon" id="heartTrigger"><i class="fas fa-heart"></i></div>
-          <div class="couple-card" id="jamesCard">
-            <div class="avatar"><i class="fas fa-user"></i></div>
-            <h3>Mark John</h3>
-            <div class="role">Groom</div>
-            <p class="desc">"Our forever begins with God."</p>
-            <div class="photo-overlay">
-              <img src="invitation/img/mj.jpg" alt="Mark John">
-              <span class="photo-label">💛 Mark John 💛</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- ===== COUNTDOWN ===== -->
+        <!-- COUNTDOWN -->
         <div class="countdown-section" id="countdownSection">
           <h3><i class="fas fa-hourglass-half countdown-icon"></i> Counting Down</h3>
           <div class="countdown-wrap" id="countdownWrap">
@@ -118,105 +126,361 @@
               <div class="label">Seconds</div>
             </div>
           </div>
+        </div>
 
-          <div class="countdown-finished" id="countdownFinished">
-            <div class="couple-photo-container">
-              <img src="invitation/img/youandme.jpeg" alt="Sharmaine & Mark John">
-              <span class="photo-badge">💚 Together Forever 💛</span>
+        <div class="page-divider" id="divider2">
+          <span class="divider-ornament">✦</span>
+          <span class="divider-line"></span>
+          <span class="divider-ornament">✦</span>
+          <span class="divider-line"></span>
+          <span class="divider-ornament">✿</span>
+          <span class="divider-line"></span>
+          <span class="divider-ornament">✦</span>
+          <span class="divider-line"></span>
+          <span class="divider-ornament">✿</span>
+          <span class="divider-line"></span>
+          <span class="divider-ornament">✦</span>
+          <span class="divider-line"></span>
+          <span class="divider-ornament">✿</span>
+          <span class="divider-line"></span>
+          <span class="divider-ornament">✦</span>
+          <span class="divider-line"></span>
+          <span class="divider-ornament">✦</span>
+        </div>
+
+        <!-- SPONSORS & ENTOURAGE -->
+        <div class="sponsors-page" id="sponsorsPage">
+          <h2 class="page-title"><i class="fas fa-users"></i> The Entourage</h2>
+          <div class="parents-section">
+            <h3>Parents of the Groom</h3>
+            <p class="parent-names">MR. ALLA BAUTISTA &amp; MRS. EVELYN BAUTISTA</p>
+            <div class="parent-divider">✦ ✿ ✦ ✿✦ ✿ ✦</div>
+            <h3>Parents of the Bride</h3>
+            <p class="parent-names">MR. SONNY CORDERO &amp; MRS. MARIVIC CORDERO</p>
+            <div class="parent-divider">✦ ✿ ✦ ✿✦ ✿ ✦</div>
+            <h3>Officiating Minister</h3>
+            <p class="parent-names">PASTOR EDWARD ONGCAL</p>
+            <div class="parent-divider">✦ ✿ ✦ ✿✦ ✿ ✦</div>
+            <h3>Principal Sponsors</h3>
+            <p class="parent-names"><small>To stand as witness as we exchange our vows</small></p>
+          </div>
+          <div class="principal-sponsors">
+            <div class="sponsors-grid">
+              <div class="sponsor-column">
+                <div class="name-item">CAPT. HERMIGNIO ALCANTARA JR.</div>
+                <div class="name-item">CAPT. CHARNIE TURALBA</div>
+                <div class="name-item">KGWD. ARNOLD LLAGAS</div>
+                <div class="name-item">MR. ELIO BAUTISTA</div>
+                <div class="name-item">MR. BIEN BAYSA JR.</div>
+                <div class="name-item">MR. FEDERICO FERRER</div>
+                <div class="name-item">MR. LEOPOLDO ORINES</div>
+                <div class="name-item">MR. FERNANDO VINOYA</div>
+                <div class="name-item">MR. JOSE MELLANO</div>
+                <div class="name-item">MR. REYNAN CACAL</div>
+                <div class="name-item">MR. MARLON SERRA</div>
+                <div class="name-item">MR. ALVIN CORALES</div>
+                <div class="name-item">MR. ALEXANDER PASAMONTE</div>
+                <div class="name-item">MR. MICHAEL CACAL</div>
+                <div class="name-item">MR. RAMESIS PAPA</div>
+                <div class="name-item">MR. ZALDY CARINO</div>
+                <div class="name-item">MR. JOE VINCENT TUBON</div>
+                <div class="name-item">MR. ERIC CABILES</div>
+                <div class="name-item">MR. MICHAEL DULAY</div>
+                <div class="name-item">MR. LUTHAR NERMAL</div>
+                <div class="name-item">MR. GEOFFREY MONTOYA</div>
+              </div>
+              <div class="sponsor-column">
+                <div class="name-item">MRS. DIGNA MARARAC</div>
+                <div class="name-item">MRS. JENNY RAPOSAS</div>
+                <div class="name-item">MRS. VIRGINIA CAYAG</div>
+                <div class="name-item">MRS. EDMARIE BAUTISTA</div>
+                <div class="name-item">MRS. MERANI BAYSA</div>
+                <div class="name-item">MRS. JOSEFINA MALE</div>
+                <div class="name-item">MRS. MARICRIS ORINES</div>
+                <div class="name-item">MRS. ELEANOR VINOYA</div>
+                <div class="name-item">MRS. LINDA LO</div>
+                <div class="name-item">MRS. GINA CACAL</div>
+                <div class="name-item">MRS. ESTELITA ECALLA</div>
+                <div class="name-item">MRS. MARYFE GARCIA</div>
+                <div class="name-item">MRS. EVELYN INES</div>
+                <div class="name-item">MRS. VIRGINIA CACAL</div>
+                <div class="name-item">MRS. VIOLETA PATRICIO</div>
+                <div class="name-item">MRS. EMILY AGBANLOG</div>
+                <div class="name-item">MRS. MIRANDA AQUINO</div>
+                <div class="name-item">MRS. AVELIN GANIGAN</div>
+                <div class="name-item">MRS. ANALIZA CABILES</div>
+                <div class="name-item">MRS. MARYMEL PASAMONTE</div>
+                <div class="name-item">MRS. LIZ MARI NERMAL</div>
+                <div class="name-item">MRS. SIONY CLAVEL</div>
+              </div>
             </div>
-            <h3>💚 The Wedding Day is Here! 💛</h3>
-            <p>Mark John &amp; Sharmaine are now married!</p>
-            <div class="celebration-text">🎉 💚 💛 🎉</div>
-            <p class="finish-quote">"And they lived happily ever after..."</p>
+          </div>
+          <div class="principal-sponsors">
+            <div class="parent-divider">✦ ✿ ✦ ✿✦ ✿ ✦</div>
+            <h3>Secondary Sponsors</h3>
+            <p class="parent-names"><small>To assist us in our needs</small></p>
+            <div class="sponsors-grid">
+              <div class="sponsor-column">
+                <h3><i class="fas fa-user-tie"></i> Best Man</h3>
+                <h3 class="name-item">SHERWIN CORDERO</h3>
+                <h3><small>Groomsmen</small></h3>
+                <div class="name-item">NEIL MALE</div>
+                <div class="name-item">ERICSON CABILES</div>
+                <div class="name-item">EDMOND BAUTISTA</div>
+                <div class="name-item">CHRISTAN JOY GALUTAN</div>
+                <div class="name-item">JERDON MACARAEG</div>
+                <div class="name-item">MARK ANTHONY SAPERA</div>
+                <div class="name-item">JUN CRIS CORDERO</div>
+                <div class="name-item">TRISTAN VERN PATRICIO</div>
+                <div class="name-item">AERONICK JAIPHIL ORINES</div>
+                <div class="name-item">ANDRE SOLIVEN</div>
+              </div>
+              <div class="sponsor-column">
+                <h3><i class="fas fa-user-friends"></i> Maid of Honor</h3>
+                <h3 class="name-item">NORA RUTH BAUTISTA</h3>
+                <h3><small>Bridesmaids</small></h3>
+                <div class="name-item">CATHERINE PATRICIO</div>
+                <div class="name-item">TRISHA VERN PATRICIO</div>
+                <div class="name-item">PRINCESS PASSAMONTE</div>
+                <div class="name-item">CINDY SAPIGAO</div>
+                <div class="name-item">ROCHELLE PATRICIO</div>
+                <div class="name-item">DIANNE BAUTISTA</div>
+                <div class="name-item">LARYZA BAYSA</div>
+                <div class="name-item">RIZZA CAYAG</div>
+                <div class="name-item">HILLARY PAULEEN ORINES</div>
+                <div class="name-item">JAMELLA PATRICIO</div>
+              </div>
+            </div>
+            <div class="special-roles">
+              <div class="parent-divider">✦ ✿ ✦ ✿✦ ✿ ✦</div>
+              <h3><small><i class="fas fa-star"></i> Special Roles</small></h3>
+              <div class="roles-grid">
+                <div class="role-item">
+                  <i class="fas fa-fire"></i>
+                  <strong>Candle</strong>
+                  <span>TO LIGHT OUR PATH</span>
+                  <h3><small>NEIL MALE &amp; CATHERINE PATRICIO</small> </h3>
+                </div>
+                <div class="role-item">
+                  <i class="fas fa-tshirt"></i>
+                  <strong>Veil</strong>
+                  <span>TO CLOTHE US AS ONE</span>
+                  <h3><small>SHERWIN CORDERO &amp; NORA RUTH BAUTISTA</small> </h3>
+                </div>
+                <div class="role-item">
+                  <i class="fas fa-link"></i>
+                  <strong>Cord</strong>
+                  <span>TO BIND US TOGETHER</span>
+                  <h3><small>ERICSON CABILES &amp; TRISHA VERN PATRICIO</small> </h3>
+                </div>
+                <div class="role-item">
+                  <i class="fas fa-route"></i>
+                  <strong>Guide</strong>
+                  <span>TO GUIDE US ON OUR WAY</span>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 
-        <!-- ===== VIDEO TRAILER ===== -->
-        <div class="video-trailer-section" id="videoSection">
-          <h3><i class="fas fa-play-circle video-icon"></i> Wedding Trailer</h3>
+        <div class="page-divider" id="divider2">
+          <span class="divider-ornament">✦</span>
+          <span class="divider-line"></span>
+          <span class="divider-ornament">✦</span>
+          <span class="divider-line"></span>
+          <span class="divider-ornament">✿</span>
+          <span class="divider-line"></span>
+          <span class="divider-ornament">✦</span>
+          <span class="divider-line"></span>
+          <span class="divider-ornament">✿</span>
+          <span class="divider-line"></span>
+          <span class="divider-ornament">✦</span>
+          <span class="divider-line"></span>
+          <span class="divider-ornament">✿</span>
+          <span class="divider-line"></span>
+          <span class="divider-ornament">✦</span>
+          <span class="divider-line"></span>
+          <span class="divider-ornament">✦</span>
+        </div>
+
+        <!-- SPECIAL ROLES CONTINUED -->
+        <div class="entourage-page" id="entouragePage">
+          <div class="special-roles">
+            <div class="role-item">
+              <i class="fas fa-bible"></i>
+              <strong>Bible Bearer</strong>
+              <span>TO CARRY OUR SYMBOL OF LOVE</span>
+              <h3><small>LHANN ANDERSEN BAUTISTA</small> </h3>
+            </div>
+            <div class="parent-divider">✦ ✿ ✦ ✿✦ ✿ ✦</div>
+            <div class="role-item">
+              <i class="fas fa-coins"></i>
+              <strong>Coin Bearer</strong>
+              <span>TO CARRY OUR SYMBOL OF TREASURE</span>
+              <h3><small>RUSSEL PAPA</small> </h3>
+            </div>
+            <div class="parent-divider">✦ ✿ ✦ ✿✦ ✿ ✦</div>
+            <div class="role-item">
+              <i class="fas fa-bible"></i>
+              <strong>Marriage Contract Bearer</strong>
+              <span>TO CARRY OUR SYMBOL OF FAITH</span>
+              <h3><small>SHENRICK CORDERO</small> </h3>
+            </div>
+            <div class="parent-divider">✦ ✿ ✦ ✿✦ ✿ ✦</div>
+            <div class="role-item">
+              <i class="fas fa-flower"></i>
+              <strong>Flower Girl</strong>
+              <span>TO SHOWER OUR PATH WITH FLOWERS</span>
+              <h3><small>ELORA ADALYN SANTIAGO</small> </h3>
+              <h3><small>ZYRINE KIM TUBERA</small> </h3>
+              <h3><small>QUEYRESH JESUSA ORPILLA</small> </h3>
+              <h3><small>SIDNEY SEN PALEAN</small> </h3>
+              <h3><small>ZALIYA HIRA MALE</small> </h3>
+            </div>
+          </div>
+        </div>
+
+        <div class="page-divider" id="divider2">
+          <span class="divider-ornament">✦</span>
+          <span class="divider-line"></span>
+          <span class="divider-ornament">✦</span>
+          <span class="divider-line"></span>
+          <span class="divider-ornament">✿</span>
+          <span class="divider-line"></span>
+          <span class="divider-ornament">✦</span>
+          <span class="divider-line"></span>
+          <span class="divider-ornament">✿</span>
+          <span class="divider-line"></span>
+          <span class="divider-ornament">✦</span>
+          <span class="divider-line"></span>
+          <span class="divider-ornament">✿</span>
+          <span class="divider-line"></span>
+          <span class="divider-ornament">✦</span>
+          <span class="divider-line"></span>
+          <span class="divider-ornament">✦</span>
+        </div>
+
+        <!-- VIDEO -->
+        <div class="video-page" id="videoPage">
+          <h2 class="page-title" id="videoTitle"><i class="fas fa-play-circle"></i> Wedding Trailer</h2>
           <div class="video-container" id="videoContainer">
             <video id="weddingVideo" playsinline preload="metadata">
-              <source src="invitation/vid/you&me.mp4">
-              Your browser does not support the video tag.
+              <source src="invitation/vid/you&me.mp4" type="video/mp4">
             </video>
-            <button class="volume-btn" id="volumeBtn" title="Toggle Sound">
-              <i class="fas fa-volume-up" id="volumeIcon"></i>
-            </button>
-            <div class="play-btn-overlay" id="videoPlayBtn">
-              <i class="fas fa-play-circle"></i>
-            </div>
+            <button class="volume-btn" id="volumeBtn"><i class="fas fa-volume-up" id="volumeIcon"></i></button>
+            <div class="play-btn-overlay" id="videoPlayBtn"><i class="fas fa-play-circle"></i></div>
             <div class="video-label">❤️ Our Love Story ❤️</div>
             <div class="video-controls" id="videoControls">
-              <button id="playPauseVideoBtn" title="Play/Pause">
-                <i class="fas fa-play" id="videoPlayIcon"></i>
-              </button>
+              <button id="playPauseVideoBtn"><i class="fas fa-play" id="videoPlayIcon"></i></button>
               <div class="progress-bar" id="progressBar">
                 <div class="progress-fill" id="progressFill"></div>
               </div>
               <span class="time-display" id="timeDisplay">0:00 / 0:00</span>
-              <button id="fullscreenBtn" class="fullscreen-btn" title="Fullscreen">
-                <i class="fas fa-expand" id="fullscreenIcon"></i>
-              </button>
+              <button id="fullscreenBtn" class="fullscreen-btn"><i class="fas fa-expand"
+                  id="fullscreenIcon"></i></button>
             </div>
           </div>
         </div>
 
-        <!-- PROGRAM -->
-        <div class="program-section" id="programSection">
-          <h3><i class="fas fa-calendar-check program-icon"></i> Wedding Program</h3>
-          <div class="program-item">
-            <span class="time">3:30 PM</span>
-            <span class="event"><i class="fas fa-people-arrows"></i> Guests arrive · welcome drinks</span>
-          </div>
-          <div class="program-item">
-            <span class="time">4:00 PM</span>
-            <span class="event"><i class="fas fa-ring"></i> Ceremony begins</span>
-          </div>
-          <div class="program-item">
-            <span class="time">5:00 PM</span>
-            <span class="event"><i class="fas fa-handshake"></i> Cocktail hour &amp; photos</span>
-          </div>
-          <div class="program-item">
-            <span class="time">6:30 PM</span>
-            <span class="event"><i class="fas fa-utensils"></i> Reception dinner</span>
-          </div>
-          <div class="program-item">
-            <span class="time">8:00 PM</span>
-            <span class="event"><i class="fas fa-cake"></i> Cake cutting &amp; toasts</span>
-          </div>
-          <div class="program-item">
-            <span class="time">9:00 PM</span>
-            <span class="event"><i class="fas fa-music"></i> Dance floor opens · Party!</span>
+        <!-- POST-WEDDING THANK YOU -->
+        <div class="post-wedding-section" id="postWeddingSection">
+          <div class="post-wedding-content">
+            <div class="post-wedding-flowers">🌸 🌺 🌿</div>
+            <h2 class="post-wedding-title">Thank You!</h2>
+            <div class="post-wedding-divider">✦ ✿ ✦ ✿✦ ✿ ✦</div>
+            <p class="post-wedding-text">
+              Mark John &amp; Sharmaine are now married!<br>
+              Thank you for being part of our special day.<br>
+              Your love and support mean the world to us.
+            </p>
+            <div class="post-wedding-heart">💚</div>
+            <p class="post-wedding-verse">"And they lived happily ever after..."</p>
           </div>
         </div>
 
-        <!-- WEDDING PARTY -->
-        <div class="party-section" id="partySection">
-          <div class="party-title">
-            <h3><i class="fas fa-users party-icon"></i> Wedding Party</h3>
-          </div>
-          <div class="party-sub"><i class="fas fa-handshake"></i> Sponsors (40)</div>
-          <div class="party-grid" id="sponsorsGrid"></div>
-          <div class="party-sub"><i class="fas fa-user-tie"></i> Groomsmen (10)</div>
-          <div class="party-grid" id="groomsmenGrid"></div>
-          <div class="party-sub"><i class="fas fa-user-friends"></i> Bridesmaids (10)</div>
-          <div class="party-grid" id="bridesmaidsGrid"></div>
-          <div class="party-sub"><i class="fas fa-star"></i> Special Roles</div>
-          <div class="party-grid" id="specialRolesGrid"></div>
+        <div class="page-divider" id="divider2">
+          <span class="divider-ornament">✦</span>
+          <span class="divider-line"></span>
+          <span class="divider-ornament">✦</span>
+          <span class="divider-line"></span>
+          <span class="divider-ornament">✿</span>
+          <span class="divider-line"></span>
+          <span class="divider-ornament">✦</span>
+          <span class="divider-line"></span>
+          <span class="divider-ornament">✿</span>
+          <span class="divider-line"></span>
+          <span class="divider-ornament">✦</span>
+          <span class="divider-line"></span>
+          <span class="divider-ornament">✿</span>
+          <span class="divider-line"></span>
+          <span class="divider-ornament">✦</span>
+          <span class="divider-line"></span>
+          <span class="divider-ornament">✦</span>
         </div>
 
-        <!-- RSVP & CLOSE -->
-        <div class="rsvp-section" id="rsvpSection">
-          <a href="https://m.me/janjan.delbarrio.official" target="_blank" class="btn-gold" id="rsvpBtn">
-            <i class="fab fa-facebook-messenger"></i> RSVP now
-          </a>
-          <div>
-            <button class="close-seal-btn" id="closeSealBtn">
-              <i class="fas fa-envelope"></i> Seal again
-            </button>
+        <!-- DETAILS -->
+        <div class="details-page" id="detailsPage">
+          <h2 class="page-title"><i class="fas fa-info-circle"></i> Dress Code</h2>
+          <div class="attendance-section">
+            <div class="color-palette">
+              <span class="color-item">
+                <i class="fas fa-circle emerald-color"></i>
+                Emerald Green
+              </span>
+              <span class="color-item">
+                <i class="fas fa-circle green-color"></i>
+                Green
+              </span>
+              <span class="color-item">
+                <i class="fas fa-circle gold-color"></i>
+                Gold
+              </span>
+              <span class="color-item">
+                <i class="fas fa-circle beige-color"></i>
+                Beige
+              </span>
+            </div>
+            <p class="no-jewelry">
+              <i class="fas fa-gem"></i>
+              <strong>Kindly note: No jewelry, please.</strong>
+            </p>
           </div>
-          <div class="music-note">
-            <i class="fas fa-music"></i> ♪ Instrumental Wedding Entrance ♪
+          <div class="gift-message">
+            <i class="fas fa-gift"></i>
+            <p>With all that we have, we've been truly blessed,<br>your presence and prayers are all that we
+              request.<br>But if you desire to give nonetheless,<br><strong>monetary gift</strong> is the one we humbly
+              request.</p>
+          </div>
+          <div class="hashtag-section">
+            <h3><i class="fas fa-hashtag"></i> Snap & Share</h3>
+            <p>Help us document our special day by sharing our captured moments using our official hashtag</p>
+            <div class="hashtag">#OurForeverBegins</div>
+            <div class="hashtag">#18</div>
+            <div class="hashtag">#MJ&Sharmaine</div>
+          </div>
+          <div class="reminders">
+            <h3><i class="fas fa-bell"></i> Reminders</h3>
+            <ul>
+              <li><i class="fas fa-clock"></i> BE ON TIME</li>
+              <li><i class="fas fa-check-circle"></i> FINISH THE EVENT</li>
+              <li><i class="fas fa-heart"></i> BE BLESSED AND HAVE FUN</li>
+            </ul>
+          </div>
+          <div class="bible-verse">
+            <i class="fas fa-bible"></i>
+            <p>"No one has ever seen God; but if we love one another, God lives in us and his love is made complete in
+              us."</p>
+            <span>1 John 4:12</span>
+          </div>
+          <div class="action-section" id="actionSection">
+            <a href="https://m.me/janjan.delbarrio.official" target="_blank" class="btn-gold" id="rsvpBtn"><i
+                class="fab fa-facebook-messenger"></i> RSVP now</a>
+            <button class="close-seal-btn" id="closeSealBtn"><i class="fas fa-envelope"></i> Close Book</button>
+          </div>
+          <div class="book-closing" id="bookClosing">
+            <div class="closing-ornament">✦ ✿ ✦ ✿✦ ✿ ✦</div>
+            <p class="closing-text">Thank you for being part of our story</p>
+            <div class="closing-heart">💚</div>
           </div>
         </div>
 
@@ -224,15 +488,12 @@
     </div>
   </div>
 
-  <!-- ===== AUDIO ===== -->
   <audio id="bgAudio" preload="auto" loop>
     <source src="invitation/music/wedding-audio.mp3" type="audio/mpeg">
   </audio>
-
-  <!-- ===== CONFETTI ===== -->
   <div class="confetti-container" id="confettiContainer"></div>
 
-  <!-- Custom JavaScript -->
   <script src="invitation/script.js"></script>
 </body>
+
 </html>
