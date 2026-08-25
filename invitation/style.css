@@ -1625,7 +1625,7 @@ body {
     .cover-seal span { font-size: 0.4rem; }
     .couple-names h2 { font-size: 1.4rem; }
     .and-symbol { font-size: 1rem; }
-    .couple-card { max-width: 100%; min-height: 180px; padding: 20px 15px; }
+    .couple-card { padding: 20px 15px; }
     .couple-card .avatar { width: 70px; height: 70px; line-height: 70px; font-size: 2.8rem; }
     .couple-card h3 { font-size: 1.5rem; }
     .couple-card .desc { font-size: 0.8rem; }
