@@ -431,7 +431,7 @@
     audio.addEventListener('pause', function () { setMusicUI(false); });
   }
 
-  // ----- RSVP -----
+  // ----- RSVP: Google Sheets integration -----
   function setRsvpStatus(text, isError) {
     if (!rsvpStatus) return;
     rsvpStatus.textContent = text;
@@ -451,65 +451,83 @@
   }
 
   if (rsvpForm) {
-    rsvpForm.addEventListener('submit', function (e) {
+    rsvpForm.addEventListener('submit', async function (e) {
       e.preventDefault();
       if (rsvpSubmit && rsvpSubmit.disabled) return;
 
       var name = rsvpName ? rsvpName.value.trim() : '';
       var attendance = rsvpAttendance ? rsvpAttendance.value : '';
-      var guests = rsvpGuests ? rsvpGuests.value : '';
+      var guests = rsvpGuests ? rsvpGuests.value : '0';
       var message = rsvpMessage ? rsvpMessage.value.trim() : '';
 
-      if (!name) {
-        setRsvpStatus('Please enter your full name.', true);
+      if (!name || name.length > 100) {
+        setRsvpStatus('Please enter a valid full name.', true);
         if (rsvpName) rsvpName.focus();
         return;
       }
-      if (!attendance) {
-        setRsvpStatus('Please choose whether you can attend.', true);
+
+      if (attendance !== "Yes, I'll be there" && attendance !== "No, I can't make it") {
+        setRsvpStatus('Please select your attendance.', true);
         if (rsvpAttendance) rsvpAttendance.focus();
         return;
       }
-      if (attendance !== "Yes, I'll be there") {
-        guests = '0';
-      } else {
-        var guestCount = parseInt(guests, 10);
-        if (isNaN(guestCount) || guestCount < 1 || guestCount > 10) {
-          setRsvpStatus('Please enter a guest count between 1 and 10.', true);
+
+      var guestCount = 0;
+      if (attendance === "Yes, I'll be there") {
+        guestCount = Number(guests);
+        if (!Number.isInteger(guestCount) || guestCount < 1 || guestCount > 10) {
+          setRsvpStatus('Please enter between 1 and 10 guests.', true);
           if (rsvpGuests) rsvpGuests.focus();
           return;
         }
-        guests = String(guestCount);
       }
-      if (RSVP_ENDPOINT.indexOf('PASTE_DEPLOYMENT_ID') !== -1) {
-        setRsvpStatus('RSVP is not connected yet. Please message us instead.', true);
+
+      if (message.length > 500) {
+        setRsvpStatus('Your message is too long.', true);
+        return;
+      }
+
+      if (!RSVP_ENDPOINT || RSVP_ENDPOINT.indexOf('PASTE_DEPLOYMENT_ID') !== -1 || RSVP_ENDPOINT.indexOf('/exec') === -1) {
+        setRsvpStatus('RSVP connection is not configured yet. Please message us instead.', true);
         return;
       }
 
       var payload = {
         name: name,
         attendance: attendance,
-        guests: guests,
-        message: message,
-        sentAt: new Date().toISOString()
+        guests: guestCount,
+        message: message
       };
 
-      if (rsvpSubmit) rsvpSubmit.disabled = true;
-      setRsvpStatus('Sending your RSVP…', false);
+      if (rsvpSubmit) {
+        rsvpSubmit.disabled = true;
+        rsvpSubmit.textContent = 'Sending RSVP...';
+      }
+      setRsvpStatus('Sending your RSVP...', false);
 
-      fetch(RSVP_ENDPOINT, {
-        method: 'POST',
-        mode: 'no-cors',
-        headers: { 'Content-Type': 'text/plain;charset=utf-8' },
-        body: JSON.stringify(payload)
-      }).then(function () {
+      try {
+        await fetch(RSVP_ENDPOINT, {
+          method: 'POST',
+          mode: 'no-cors',
+          headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+          body: JSON.stringify(payload)
+        });
+
         if (rsvpForm) rsvpForm.hidden = true;
-        if (rsvpThanks) rsvpThanks.hidden = false;
+        if (rsvpThanks) {
+          rsvpThanks.hidden = false;
+          var thanksText = rsvpThanks.querySelector('p');
+          if (thanksText) thanksText.textContent = 'Thank you! Your RSVP has been sent. 💚';
+        }
         setRsvpStatus('', false);
-      }).catch(function () {
-        if (rsvpSubmit) rsvpSubmit.disabled = false;
-        setRsvpStatus('Sorry, something went wrong. Please try again or message us.', true);
-      });
+      } catch (error) {
+        console.error('RSVP error:', error);
+        if (rsvpSubmit) {
+          rsvpSubmit.disabled = false;
+          rsvpSubmit.textContent = 'Send RSVP';
+        }
+        setRsvpStatus('Unable to send your RSVP. Please try again or message us.', true);
+      }
     });
   }
 
