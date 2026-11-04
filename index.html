@@ -16,20 +16,20 @@
   <meta property="og:url" content="https://bautistamarkjohn53.github.io/wedding-invitation/">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="MJ & Sharmaine Wedding">
-  <link rel="icon" type="image/png" href="wedding-invitation/img/ring.png">
+  <link rel="icon" type="image/png" href="img/ring.png">
   <!-- Critical preloads for instant photos (preloader waits for these) -->
-  <link rel="preload" as="image" href="wedding-invitation/img/mj.webp" type="image/webp">
-  <link rel="preload" as="image" href="wedding-invitation/img/maine.webp" type="image/webp">
-  <link rel="preload" as="image" href="wedding-invitation/img/youandme.webp" type="image/webp">
-  <!-- Self-hosted fonts (invitation/fonts/*.woff2) -->
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="wedding-invitation/fonts/great-vibes-400.woff2">
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="wedding-invitation/fonts/playfair-display-normal.woff2">
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="wedding-invitation/fonts/playfair-display-italic.woff2">
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="wedding-invitation/fonts/lato-400.woff2">
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="wedding-invitation/fonts/lato-300.woff2">
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="wedding-invitation/fonts/lato-700.woff2">
+  <link rel="preload" as="image" href="img/mj.webp" type="image/webp">
+  <link rel="preload" as="image" href="img/maine.webp" type="image/webp">
+  <link rel="preload" as="image" href="img/youandme.webp" type="image/webp">
+  <!-- Self-hosted fonts (fonts/*.woff2) -->
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="fonts/great-vibes-400.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="fonts/playfair-display-normal.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="fonts/playfair-display-italic.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="fonts/lato-400.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="fonts/lato-300.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="fonts/lato-700.woff2">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-  <link rel="stylesheet" href="wedding-invitation/style.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body aria-busy="true">
@@ -53,13 +53,13 @@
   <div class="bg-gradient" aria-hidden="true"></div>
   <div class="bg-glow" aria-hidden="true"></div>
 
-  <main class="book-container" id="weddingCard">
+  <main class="book-container">
     <!-- COVER -->
     <section class="cover-page" id="envelopeLayer" aria-label="Envelope cover">
       <div class="cover-content">
         <picture>
-          <source srcset="wedding-invitation/img/ring.webp" type="image/webp">
-          <img src="wedding-invitation/img/ring.png" alt="Wedding rings" width="100" height="100" class="ring-img"
+          <source srcset="img/ring.webp" type="image/webp">
+          <img src="img/ring.png" alt="Wedding rings" width="100" height="100" class="ring-img"
             fetchpriority="high">
         </picture>
         <p class="cover-save">Save the Date</p>
@@ -87,7 +87,7 @@
         <div class="music-row" id="musicPlayerWrapper">
           <button class="music-player-circle" id="musicPlayer" aria-label="Play background music">
             <i class="fas fa-music disc-icon" id="discIcon" aria-hidden="true"></i>
-            <span class="play-pause-icon" id="playPauseBtn" aria-hidden="true"><i class="fas fa-play"
+            <span class="play-pause-icon" aria-hidden="true"><i class="fas fa-play"
                 id="playIcon"></i></span>
           </button>
           <div class="music-meta">
@@ -116,8 +116,8 @@
               <p class="desc">"Our forever begins with God."</p>
               <div class="photo-overlay" aria-hidden="true">
                 <picture>
-                  <source srcset="wedding-invitation/img/mj.webp" type="image/webp">
-                  <img src="wedding-invitation/img/mj.jpg" alt="Mark John" width="800" height="1172" fetchpriority="high"
+                  <source srcset="img/mj.webp" type="image/webp">
+                  <img src="img/mj.jpg" alt="Mark John" width="800" height="1172" fetchpriority="high"
                     decoding="async">
                 </picture>
                 <span class="photo-label">💛 Mark John 💛</span>
@@ -133,8 +133,8 @@
               <p class="desc">"A lifetime of love begins with 'I DO'."</p>
               <div class="photo-overlay" aria-hidden="true">
                 <picture>
-                  <source srcset="wedding-invitation/img/maine.webp" type="image/webp">
-                  <img src="wedding-invitation/img/maine.jpg" alt="Sharmaine" width="800" height="1270" fetchpriority="high"
+                  <source srcset="img/maine.webp" type="image/webp">
+                  <img src="img/maine.jpg" alt="Sharmaine" width="800" height="1270" fetchpriority="high"
                     decoding="async">
                 </picture>
                 <span class="photo-label">💚 Sharmaine 💚</span>
@@ -155,7 +155,7 @@
 
         <!-- COUNTDOWN -->
         <section class="countdown-section" id="countdownSection" aria-label="Countdown">
-          <h3><i class="fas fa-hourglass-half countdown-icon" aria-hidden="true"></i> Counting Down</h3>
+          <h3><i class="fas fa-hourglass-half" aria-hidden="true"></i> Counting Down</h3>
           <div class="countdown-wrap">
             <div class="countdown-item">
               <div class="number" id="days">00</div>
@@ -181,7 +181,7 @@
             class="divider-ornament">✦</span></div>
 
         <!-- ENTOURAGE (collapsible for mobile) -->
-        <section class="sponsors-page" id="sponsorsPage" aria-label="Entourage">
+        <section id="sponsorsPage" aria-label="Entourage">
           <h2 class="page-title"><i class="fas fa-users" aria-hidden="true"></i> The Entourage</h2>
 
           <div class="parents-section">
@@ -198,7 +198,7 @@
           <details class="accordion" open>
             <summary><i class="fas fa-star" aria-hidden="true"></i> Principal Sponsors <small>— to stand as
                 witness</small></summary>
-            <div class="principal-sponsors">
+            <div>
               <div class="sponsors-grid">
                 <div class="sponsor-column">
                   <div class="name-item">CAPT. HERMIGNIO ALCANTARA JR.</div>
@@ -320,17 +320,17 @@
             class="divider-ornament">✦</span></div>
 
         <!-- VIDEO -->
-        <section class="video-page" id="videoPage" aria-label="Wedding trailer">
-          <h2 class="page-title" id="videoTitle"><i class="fas fa-play-circle" aria-hidden="true"></i> Wedding Trailer
+        <section class="video-page" aria-label="Wedding trailer">
+          <h2 class="page-title"><i class="fas fa-play-circle" aria-hidden="true"></i> Groom &amp; Bride Video
           </h2>
           <div class="video-container" id="videoContainer">
-            <video id="weddingVideo" playsinline preload="none" poster="wedding-invitation/img/youandme.jpeg">
-              <source src="wedding-invitation/vid/video-1.mp4" type="video/mp4" data-label="❤️ Our Love Story ❤️"
-                data-poster="wedding-invitation/img/youandme.jpeg">
-              <source src="wedding-invitation/vid/video-2.mp4" type="video/mp4" data-label="💍 Our Journey 💍"
-                data-poster="wedding-invitation/img/youandme.jpeg">
-              <source src="wedding-invitation/vid/video-3.mp4" type="video/mp4" data-label="💚 Forever 💚"
-                data-poster="wedding-invitation/img/youandme.jpeg">
+            <video id="weddingVideo" playsinline preload="none" poster="img/youandme.jpeg">
+              <source src="vid/video-1.mp4" type="video/mp4" data-label="❤️ Our Love Story ❤️"
+                data-poster="img/youandme.jpeg">
+              <source src="vid/video-2.mp4" type="video/mp4" data-label="💍 Our Journey 💍"
+                data-poster="img/youandme.jpeg">
+              <source src="vid/video-3.mp4" type="video/mp4" data-label="💚 Forever 💚"
+                data-poster="img/youandme.jpeg">
             </video>
             <button class="video-nav prev" id="prevVideoBtn" aria-label="Previous video" hidden><i
                 class="fas fa-chevron-left" aria-hidden="true"></i></button>
@@ -349,7 +349,7 @@
                 <div class="progress-fill" id="progressFill"></div>
               </div>
               <span class="time-display" id="timeDisplay">0:00 / 0:00</span>
-              <button id="fullscreenBtn" class="fullscreen-btn" aria-label="Fullscreen"><i class="fas fa-expand"
+              <button id="fullscreenBtn" aria-label="Fullscreen"><i class="fas fa-expand"
                   id="fullscreenIcon" aria-hidden="true"></i></button>
             </div>
           </div>
@@ -358,10 +358,10 @@
 
         <!-- THANK YOU -->
         <section class="post-wedding-section" id="postWeddingSection" aria-label="Thank you">
-          <div class="post-wedding-content">
-            <div class="post-wedding-flowers" aria-hidden="true">🌸 🌺 🌿</div>
+          <div>
+            <div aria-hidden="true">🌸 🌺 🌿</div>
             <h2 class="post-wedding-title">Thank You!</h2>
-            <div class="post-wedding-divider" aria-hidden="true">✦ ✿ ✦</div>
+            <div aria-hidden="true">✦ ✿ ✦</div>
             <p class="post-wedding-text">Mark John &amp; Sharmaine are now married!<br>Thank you for being part of our
               special day.<br>Your love and support mean the world to us.</p>
             <div class="post-wedding-heart" aria-hidden="true">💚</div>
@@ -374,9 +374,9 @@
             class="divider-ornament">✦</span></div>
 
         <!-- DETAILS -->
-        <section class="details-page" id="detailsPage" aria-label="Details">
+        <section id="detailsPage" aria-label="Details">
           <h2 class="page-title"><i class="fas fa-shirt" aria-hidden="true"></i> Dress Code</h2>
-          <div class="attendance-section">
+          <div>
             <div class="color-palette">
               <span class="color-item"><i class="fas fa-circle emerald-color" aria-hidden="true"></i> Emerald
                 Green</span>
@@ -414,7 +414,7 @@
               us."</p>
             <span>1 John 4:12</span>
           </div>
-          <div class="rsvp-section" id="rsvpSection">
+          <div class="rsvp-section">
             <h3><i class="fas fa-envelope-open-text" aria-hidden="true"></i> RSVP</h3>
             <p class="rsvp-note">Kindly let us know if you can celebrate with us.</p>
             <form class="rsvp-form" id="rsvpForm" novalidate>
@@ -450,9 +450,9 @@
             </div>
           </div>
 
-          <div class="action-section" id="actionSection">
-            <a href="https://m.me/janjan.delbarrio.official" target="_blank" rel="noopener" class="btn-gold"
-              id="rsvpBtn"><i class="fab fa-facebook-messenger" aria-hidden="true"></i> Message us instead</a>
+          <div class="action-section">
+            <a href="https://m.me/janjan.delbarrio.official" target="_blank" rel="noopener" class="btn-gold"><i
+                class="fab fa-facebook-messenger" aria-hidden="true"></i> Message us instead</a>
             <button class="close-seal-btn" id="closeSealBtn"><i class="fas fa-envelope" aria-hidden="true"></i> Close
               Invitation</button>
           </div>
@@ -463,11 +463,11 @@
   </main>
 
   <audio id="bgAudio" preload="none" loop>
-    <source src="wedding-invitation/music/wedding-audio.mp3" type="audio/mpeg">
+    <source src="music/wedding-audio.mp3" type="audio/mpeg">
   </audio>
   <div class="confetti-container" id="confettiContainer" aria-hidden="true"></div>
 
-  <script src="wedding-invitation/script.js" defer></script>
+  <script src="script.js" defer></script>
 </body>
 
 </html>
