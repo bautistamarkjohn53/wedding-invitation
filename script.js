@@ -31,12 +31,12 @@
   document.body.classList.add('locked');
 
   // webp + jpg pairs: <picture> may pick either, so both must be decoded
-  // (bg pair covers the CSS cover background; youandme pair covers the video poster)
+  // (youandme pair also covers the video poster)
   var criticalPairs = [
-    ['invitation/img/mj.webp', 'invitation/img/mj.jpg'],
-    ['invitation/img/maine.webp', 'invitation/img/maine.jpg'],
-    ['invitation/img/youandme.webp', 'invitation/img/youandme.jpeg'],
-    ['invitation/img/ring.webp', 'invitation/img/ring.png']
+    ['img/mj.webp', 'img/mj.jpg'],
+    ['img/maine.webp', 'img/maine.jpg'],
+    ['img/youandme.webp', 'img/youandme.jpeg'],
+    ['img/ring.webp', 'img/ring.png']
   ];
   var fontFaces = [
     ['Great Vibes', '400', 'normal'],
@@ -169,10 +169,7 @@
   var ellaCard = document.getElementById('ellaCard');
   var heartTrigger = document.getElementById('heartTrigger');
 
-  var countdownSection = document.getElementById('countdownSection');
   var postWeddingSection = document.getElementById('postWeddingSection');
-  var actionSection = document.getElementById('actionSection');
-  var pageContent = document.querySelector('.page-content');
 
   var rsvpForm = document.getElementById('rsvpForm');
   var rsvpName = document.getElementById('rsvpName');
@@ -184,7 +181,7 @@
   var rsvpSubmit = document.getElementById('rsvpSubmit');
   var rsvpThanks = document.getElementById('rsvpThanks');
 
-  // Paste your deployed Google Apps Script Web App URL here (see invitation/rsvp-backend.gs)
+  // Paste your deployed Google Apps Script Web App URL here (see rsvp-backend.gs)
   var RSVP_ENDPOINT = 'https://script.google.com/macros/s/PASTE_DEPLOYMENT_ID/exec';
 
   var isOpen = false;
@@ -193,10 +190,8 @@
   var isPostWedding = false;
 
   // ----- Couple photos: tap-friendly (not hover-only) -----
-  function toggleCards(force) {
-    var show;
-    if (typeof force === 'boolean') show = force;
-    else show = !(jamesCard.classList.contains('show-photo') && ellaCard.classList.contains('show-photo'));
+  function toggleCards() {
+    var show = !(jamesCard.classList.contains('show-photo') && ellaCard.classList.contains('show-photo'));
     jamesCard.classList.toggle('show-photo', show);
     ellaCard.classList.toggle('show-photo', show);
   }
@@ -475,7 +470,17 @@
         if (rsvpAttendance) rsvpAttendance.focus();
         return;
       }
-      if (attendance !== "Yes, I'll be there") guests = '0';
+      if (attendance !== "Yes, I'll be there") {
+        guests = '0';
+      } else {
+        var guestCount = parseInt(guests, 10);
+        if (isNaN(guestCount) || guestCount < 1 || guestCount > 10) {
+          setRsvpStatus('Please enter a guest count between 1 and 10.', true);
+          if (rsvpGuests) rsvpGuests.focus();
+          return;
+        }
+        guests = String(guestCount);
+      }
       if (RSVP_ENDPOINT.indexOf('PASTE_DEPLOYMENT_ID') !== -1) {
         setRsvpStatus('RSVP is not connected yet. Please message us instead.', true);
         return;
