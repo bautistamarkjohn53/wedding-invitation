@@ -29,6 +29,24 @@ wedding-invitation/
 3. Wait 1-2 min, open Pages URL. Share via Messenger/WhatsApp to test OG preview (`envelop.jpg`).
 4. If forked under new username, update `og:image` + `og:url` in `index.html`.
 
+## RSVP setup (Google Sheets)
+RSVPs are saved to this spreadsheet:
+`https://docs.google.com/spreadsheets/d/1MhmxGjHO6LG8vQNo7vw3KJc2kR4uUw6jl3oNxdbXg_k/edit`
+
+Expected columns (row 1):
+`Full Name` · `Will you attent?` · `Number of guests` · `Messages`
+
+1. Open <https://script.google.com> → **New project**.
+2. Paste the contents of `rsvp-backend.gs`, then **Save**.
+3. Run `setupRsvpSheet` once and authorize access (creates the header row if empty).
+4. **Deploy** → **New deployment** → **Web app**:
+   - Execute as: **Me**
+   - Who has access: **Anyone**
+5. Copy the `/exec` URL and paste it into `RSVP_ENDPOINT` in `script.js`.
+6. After editing the script later, deploy a **New version** so changes take effect.
+
+The spreadsheet must be editable by the Google account that runs the script.
+
 ## Local test
 ```powershell
 # any static server, e.g:

@@ -181,8 +181,9 @@
   var rsvpSubmit = document.getElementById('rsvpSubmit');
   var rsvpThanks = document.getElementById('rsvpThanks');
 
-  // Paste your deployed Google Apps Script Web App URL here (see rsvp-backend.gs)
-  var RSVP_ENDPOINT = 'https://script.google.com/macros/s/PASTE_DEPLOYMENT_ID/exec';
+  // Paste your deployed Google Apps Script Web App URL here (see rsvp-backend.gs).
+  // You can also define window.RSVP_ENDPOINT before this script loads.
+  var RSVP_ENDPOINT = window.RSVP_ENDPOINT || 'https://script.google.com/macros/s/AKfycbyGWSpttszBetO3y_ujpAL3WXSll2_BPmMZWPwZruYtTmjEcybrpzvX973KeAr5paA/exec';
 
   var isOpen = false;
   var isAudioPlaying = false;
@@ -492,12 +493,12 @@
         return;
       }
 
-      var payload = {
+      var payload = new URLSearchParams({
         name: name,
         attendance: attendance,
-        guests: guestCount,
+        guests: String(guestCount),
         message: message
-      };
+      });
 
       if (rsvpSubmit) {
         rsvpSubmit.disabled = true;
@@ -509,8 +510,7 @@
         await fetch(RSVP_ENDPOINT, {
           method: 'POST',
           mode: 'no-cors',
-          headers: { 'Content-Type': 'text/plain;charset=utf-8' },
-          body: JSON.stringify(payload)
+          body: payload
         });
 
         if (rsvpForm) rsvpForm.hidden = true;
